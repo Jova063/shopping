@@ -5,7 +5,9 @@
 }
 .tel_nomber{
   margin-left: 10px;
+  margin-right: 10px;
 }
 .tel_location{
+  padding-left: 10px;
   padding-right: 100px;
 }

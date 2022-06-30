@@ -13,6 +13,7 @@ export default class App extends Component {
                 <ImLocation/>
                 <p className='tel_location'>Ташкент</p>
              </div>
+             <hr/>
        </navbar>
       </div>
     )
