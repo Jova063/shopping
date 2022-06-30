@@ -1,0 +1,11 @@
+.navbar_top{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.tel_nomber{
+  margin-left: 10px;
+}
+.tel_location{
+  padding-right: 100px;
+}
