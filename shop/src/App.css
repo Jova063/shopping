@@ -1,13 +1,53 @@
-.navbar_top{
-  display: flex;
-  align-items: center;
-  justify-content: end;
+.carousel{
+  padding: 0 10%;
+  position: relative;
 }
-.tel_nomber{
-  margin-left: 10px;
-  margin-right: 10px;
+.carousel_text{
+  position: absolute;
+  width: 351px;
+  height: 44px;
+  left: 1073px;
+  top: 59px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 44px;
+  color: #FFFFFF;
 }
-.tel_location{
-  padding-left: 10px;
-  padding-right: 100px;
+.carousel_text_span{
+  color: #FF3232;
+}
+.carousel_img{
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-indicators{
+  margin-right: 20% !important;
+  color: #C9C9C9E5;
+} 
+.carousel-control-prev {
+  left: 8% !important;
+}
+.carousel-control-next {
+  right: 8% !important;
+}
+.news{
+  width: 100%;
+  padding: 0 10%;
+  margin-top: 100px;
+}
+.news_top{
+  display: flex;align-items: center;justify-content: space-between;
+}
+.news_text{
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  color: #001025;
+}
+.news_link{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  color: #FF3232;
+  text-decoration: none;
 }
