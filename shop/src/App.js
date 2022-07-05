@@ -7,13 +7,13 @@ export default class App extends Component {
     return (
       <div>
        <navbar className='navbar'>
-             <div className='navbar_top'>
+              <div className='navbar_top'>
                 <BsTelephone/>
                 <p className='tel_nomber'>+998 (99) 000 00 00</p>
                 <ImLocation/>
                 <p className='tel_location'>Ташкент</p>
-             </div>
-             <hr/>
+              </div>
+
        </navbar>
       </div>
     )
