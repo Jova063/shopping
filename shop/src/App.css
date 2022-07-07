@@ -30,24 +30,126 @@
 .carousel-control-next {
   right: 8% !important;
 }
-.news{
+.news,
+.skit,
+.top{
   width: 100%;
   padding: 0 10%;
   margin-top: 100px;
 }
-.news_top{
+.news_top,
+.skit_top,
+.top_top{
   display: flex;align-items: center;justify-content: space-between;
 }
-.news_text{
+.news_text,
+.skit_text,
+.top_text{
   font-weight: 700;
   font-size: 34px;
   line-height: 40px;
   color: #001025;
 }
-.news_link{
+.news_link,
+.skit_link,
+.top_link{
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
   color: #FF3232;
   text-decoration: none;
+}
+.card_wrapper{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 40px;
+}
+.card_list{
+  width: 302px;
+  height: 559px;
+  background: linear-gradient(98.34deg, #FFFFFF 0%, #FFFFFF 100%);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+}
+.card_img{
+  margin: 10px;
+  width: 282px;
+  height: 271px;
+  border-radius: 30px;
+}
+.card_text{
+  width: 248px;
+  height: 200px;
+  margin: 27px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+.crad_title{
+  margin: -2px;
+}
+.card_sum{
+  text-decoration: line-through;
+  margin: -2px;
+  color: #7D7D7D;
+  font-size: 14px;
+}
+.card_skit{
+  margin: -2px;
+  font-size: 30px;
+}
+.card_button{
+  display: flex;align-items: center;justify-content: space-between;
+}
+.card_drop{
+  width: 92px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 36px;
+}
+.card_icons{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FF6875;
+  display: flex;
+  align-items: center;justify-content: center;
+}
+.card_icon{
+  font-size: 30px;
+  color: #fff;
+}
+.skit_text_span{
+  color: #FF3232;
+}
+.card_wrapper1{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 30px;
+}
+.card_list1{
+  padding: 30px 45px;
+  width: 237px;
+  height: 179px;
+  background: linear-gradient(98.34deg, #FFFFFF 0%, #FFFFFF 100%);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.08), inset 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+}
+.card_img1{
+  width: 148px;
+  height: 86px;
+}
+.card_text1{
+  margin-top: 19px;
+}
+.crad_title1{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
 }
