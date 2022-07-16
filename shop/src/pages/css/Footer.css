@@ -48,12 +48,14 @@
 }
 .footer{
     width: 100%;
-    height: 474px;
     padding: 0 10%;
     background-color: #3A3330;
+
+   
+}
+.footer1{
     display: flex;
-    justify-content: space-between;
-    padding-top: 60px;
+    justify-content: space-between; padding-top: 60px;
 }
 .footer_left_title{
     font-weight: 600;
@@ -155,4 +157,55 @@
     line-height: 19px;
     color: #FFFFFF;
     border: none;
+}
+.footer_right_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.footer_right_icon1{
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    border: 1px solid #9e9e9e;
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding-left:8px ;
+    
+}
+.footer_right_icon1:nth-child(1){
+    margin-left: 0;
+}
+.footer_hr{
+    border: 1px solid rgba(255, 255, 255, 0.4)
+}
+.footer_button{
+    display: flex;
+}
+.footer_button_p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 20px;
+    margin-left: 30%;
+    color: #FFFFFF;
+}
+@media(max-width:991px){
+    .brend_sam img,
+    .brend_hua img,
+    .brend_artel img{
+        width: 100px;
+    }
+    .footer1{
+        display: block;
+    }
+}
+@media(max-width:520px){
+    .footer{
+        padding: 0;
+    }
+    .footer_right{
+        width: 500px;}
 }

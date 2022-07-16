@@ -121,4 +121,44 @@
     font-size: 14px;
     line-height: 16px;
     color: #1D1D1D;
+  } 
+ .modal1{
+  /* display: none; */
+  width: 210px;
+  background-color: #F8F8F8;
+  margin-left: 350px;
+  margin-top: -20px;
+  padding-left: -20px;
+  display: none;
+ }
+ .modal_text{
+  list-style: none;
+  text-align: center;
+  padding: 0;
+ }
+ .modal_text_link{
+  text-decoration: none;
+  color: #000;
+ }
+ .open_modal{
+  display: block;
+ }
+ 
+  @media(max-width:991px){
+    .navbar_middle1{
+      margin-left: 0;
+    }
+    .navbar_middle_input{
+      width: 350px;
+    }
   }
+  @media(max-width:520px){
+    .navbar_middle2,
+    .navbar_middle_input{
+      display: none;
+    }
+    .navbar_top_tel_nomber{
+      display: none;
+    }
+  } 
+ 

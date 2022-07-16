@@ -32,10 +32,12 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   margin-top: 40px;
+  overflow: scroll;
+  overflow-y: hidden;
 }
 .card_list{
   width: 302px;
-  height: 559px;
+  height: 568px;
   background: linear-gradient(98.34deg, #FFFFFF 0%, #FFFFFF 100%);
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.08);
   border-radius: 30px;
@@ -100,6 +102,8 @@
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   gap: 30px;
+  overflow: scroll;
+  overflow-y: hidden;
 }
 .card_list1{
   padding: 30px 45px;
@@ -121,4 +125,12 @@
   font-size: 18px;
   line-height: 32px;
   text-align: center;
+}
+
+@media(max-width:520px){
+  
+  .card_list1{
+    padding: 20px 35px;
+    width: 200px;
+    height: 150px;}
 }

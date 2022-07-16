@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import "../css/Footer.css"
-import {BsTelephoneFill} from  "react-icons/bs"
+import {BsTelephoneFill, BsInstagram, BsTwitter} from  "react-icons/bs"
+import {FaFacebookF} from  "react-icons/fa"
 import app from "../img/XMLID_228_.png"
 import sam from "../img/samsung.png"
 import hua from "../img/huave.png"
 import mi from "../img/mi.png"
+import img from "../img/footer.png"
 export default class Footer extends Component {
   render() {
     return (
@@ -30,7 +32,8 @@ export default class Footer extends Component {
             </div>
         </section>
         <footer className='footer'>
-             <div className='footer_left'>
+            <div className='footer1'>
+            <div className='footer_left'>
                 <h6 className='footer_left_title'>иинформация</h6>
                 <ul className='footer_left_text'>
                     <li className='footer_left_info'>О нас</li>
@@ -66,8 +69,18 @@ export default class Footer extends Component {
                 </div>
                 <div className='footer_right_right'>
                     <button className='footer_right_btn'>ЗАКАЗАТЬ ЗВОНОК</button>
+                    <div className='footer_right_icons'>
+                        <div className='footer_right_icon1'><FaFacebookF/></div>
+                        <div className='footer_right_icon1'><BsInstagram/></div>
+                        <div className='footer_right_icon1'><BsTwitter/></div>
+                    </div>
                 </div>
              </div>
+            </div>
+            <hr className='footer_hr'/>
+            <div className='footer_button'>
+                <img src={img} alt="" className='footer_button_img'/><p className='footer_button_p'>© 2022 Lift Media. All Rights Reserved. </p>
+            </div>
         </footer>
       </div>  
 

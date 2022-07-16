@@ -18,7 +18,7 @@ export default class cards extends Component {
            </div>
           <div className='card_wrapper'>
             {data.map(item=>{
-              return <div className='card_list'>
+              return <div className=' '>
                 <img src={img1} alt="" className='card_img'/>
                 <div className='card_text'>
                     <p className='card_title'>{item.title}</p>
