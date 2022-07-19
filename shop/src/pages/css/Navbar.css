@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 100%;
+    width: 100vw;
     height: 102px;
     background: #F8F8F8;
     padding:0 10%;
@@ -27,7 +27,6 @@
   
   .navbar_top_tel_nomber{
     width: 161px;
-    height: 59px;
     font-weight: 600;
     font-size: 18px;
     line-height: 190%;
@@ -52,9 +51,10 @@
     margin-bottom: 8px;
   }
   .navbar_middle{
-    padding: 0 10%;
+    margin: 0 auto;
+    /* padding: 0 10%; */
     height: 98px;
-    width: 100%;
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +67,7 @@
   .navbar_middle1{
     display: flex;
     align-items: center;justify-content: center;
-    margin-left: -15%;
+    margin-left: -10%;
   }
   .navbar_middle_burger{
     Width:45px;
@@ -86,7 +86,7 @@
     position: relative;
   }
   .navbar_middle_input{
-    width: 649px;
+    width: 40vw;
     height: 54px;
     background: linear-gradient(98.34deg, #FCFCFC 0%, #F9F9F9 0.01%, #FDFDFD 100%);
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
