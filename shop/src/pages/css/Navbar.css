@@ -153,9 +153,26 @@
       width: 350px;
     }
   }
+  @media (max-width:800px){
+    .navbar_top_about{
+      margin-right: 10%;
+    }
+    .navbar_top_tel_nomber{
+      display: none;
+    }
+    .navbar_middle1{
+      display: none;
+    }
+    .navbar_middle3{
+      display: none;
+    }
+  }
   @media(max-width:520px){
-    .navbar_middle2,
-    .navbar_middle_input{
+    .navbar_middle_logo{
+      position: absolute;
+    top: 35px;
+    }
+    .navbar_middle2,{
       display: none;
     }
     .navbar_top_tel_nomber{
