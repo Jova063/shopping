@@ -1,0 +1,20 @@
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.contact_left{
+    width: 50%;
+}
+.contact_text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.contact_text_right{
+    margin-right: 400px;
+}
+.contact_right{
+    width: 50%;
+    margin-left: -50px;
+}

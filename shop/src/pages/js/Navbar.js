@@ -42,10 +42,10 @@ export default function Navbar() {
                 <li><a href='/mag' className='modal_text_link'>О магазине</a></li>
                 <li><a href='/new' className='modal_text_link'>Новинки</a></li>
                 <li><a href='/skit' className='modal_text_link'>Скидки</a></li>
-                <li><a href='#!' className='modal_text_link'>Хиты продаж</a></li>
-                <li><a href='#!' className='modal_text_link'>Товары</a></li>
-                <li><a href='#!' className='modal_text_link'>Корзина</a></li>
-                <li><a href='#!' className='modal_text_link'>Персональные данные</a></li>
+                <li><a href='/xit' className='modal_text_link'>Хиты продаж</a></li>
+                <li><a href='/goods' className='modal_text_link'>Товары</a></li>
+                <li><a href='/basket' className='modal_text_link'>Корзина</a></li>
+                <li><a href='/cope' className='modal_text_link'>Персональные данные</a></li>
               </ul>
             </div>
 
