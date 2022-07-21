@@ -11,7 +11,7 @@ export default class cards extends Component {
   render() {
     return (
       <div>
-          <section className='news'>
+      <section className='news'>
         <div className='news_top'>
           <h1 className='news_text'>Новинки </h1>
           <a href='#!' className='news_link'>Все категории</a>
@@ -41,10 +41,9 @@ export default class cards extends Component {
           </div>
        
       </section>
-
       <section className='skit'>
         <div className='skit_top'>
-          <h1 className='skit_text'>Новинки <span className='skit_text_span'>%</span> </h1>
+          <h1 className='skit_text'>Скит <span className='skit_text_span'>%</span> </h1>
           <a href='#!' className='skit_link'>Все товары в категории </a>
            </div>
           <div className='card_wrapper'>
@@ -89,9 +88,9 @@ export default class cards extends Component {
           </div>
        
       </section>
-      <section className='skit'>
-        <div className='skit_top'>
-          <h1 className='skit_text'>Хиты продаж </h1>
+      <section className='xit'>
+        <div className='xit_top'>
+          <h1 className='xit_text'>Хиты продаж </h1>
           <a href='#!' className='skit_link'>Все товары в категории </a>
            </div>
           <div className='card_wrapper'>

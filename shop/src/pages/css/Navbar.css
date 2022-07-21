@@ -123,7 +123,6 @@
     color: #1D1D1D;
   } 
  .modal1{
-  /* display: none; */
   width: 210px;
   background-color: #F8F8F8;
   margin-left: 20%;
@@ -172,7 +171,7 @@
       position: absolute;
     top: 35px;
     }
-    .navbar_middle2,{
+    .navbar_middle2{
       display: none;
     }
     .navbar_top_tel_nomber{
