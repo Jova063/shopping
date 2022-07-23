@@ -6,6 +6,7 @@ import img from "../img/kamera.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Carousel} from "react-bootstrap"
 import Footer from './Footer'
+
 export default class Home extends Component {
   render() {
     return (

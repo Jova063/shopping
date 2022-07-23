@@ -165,17 +165,27 @@
     .navbar_middle3{
       display: none;
     }
+    .navbar_middle_logo{
+      position: absolute;
+      top: 35px;
+    }
   }
   @media(max-width:520px){
     .navbar_middle_logo{
       position: absolute;
     top: 35px;
     }
-    .navbar_middle2{
-      display: none;
+    .navbar_middle_input{
+      width: 100%;
     }
     .navbar_top_tel_nomber{
       display: none;
     }
+    .navbar_top_about_link {
+      display: none;
+    }
+    .navbar_top_tel_location {
+      display: none;
+  }
   } 
  

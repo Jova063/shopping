@@ -32,7 +32,7 @@ export default function Navbar() {
                  </div>
                  <div className='navbar_middle3'>
                   <HiShoppingCart className='navbar_middle_cart'/>
-                  <p className='navbar_middle_karzinka'>Корзина</p>
+                  <a href='/basket' className='navbar_middle_karzinka'>Корзина</a>
                  </div>
               </div>
             <div className='modal1'>
@@ -44,7 +44,6 @@ export default function Navbar() {
                 <li><a href='/skit' className='modal_text_link'>Скидки</a></li>
                 <li><a href='/xit' className='modal_text_link'>Хиты продаж</a></li>
                 <li><a href='/goods' className='modal_text_link'>Товары</a></li>
-                <li><a href='/basket' className='modal_text_link'>Корзина</a></li>
                 <li><a href='/cope' className='modal_text_link'>Персональные данные</a></li>
               </ul>
             </div>

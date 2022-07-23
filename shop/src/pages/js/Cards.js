@@ -1,16 +1,48 @@
-import React, { Component } from 'react'
-import {MdAddShoppingCart} from "react-icons/md"
+import React, { Component, useState } from 'react'
+import { MdAddShoppingCart } from "react-icons/md"
 import img1 from "../img/yangi.png"
 import img2 from "../img/klipartz.jpg"
 import "../css/Cards.css"
 const data=require("../js/new") 
-const foto=require("../js/foto")
-
+const foto= require("../js/foto")
 
 export default class cards extends Component {
+  state = {
+    data: data,
+    buy:[]
+  }
+  shop=(title, img, sum, skit)=> {
+    var push= true;
+    var data1 = {
+      'title': title,
+      'img': img,
+      'sum': sum,
+      'skit': skit,
+      'count':1
+    }
+ 
+  if (this.state.buy[0]===null){
+    this.state.buy.push(data1)
+    push=false;
+  }else{
+    for(var i=0; i<this.state.buy.length; i++){
+      if (this.state.buy[i].title===data1.title){
+          this.state.buy[i].count++;
+          push=false;
+      }
+    }
+  }
+  if(push){ this.state.buy.push(data1)}
+  localStorage.setItem("names", JSON.stringify(this.state.buy));
+  var storedNames = JSON.parse(localStorage.getItem("names"));
+  console.log(storedNames); }
+
+
   render() {
     return (
       <div>
+
+      
       <section className='news'>
         <div className='news_top'>
           <h1 className='news_text'>Новинки </h1>
@@ -30,7 +62,7 @@ export default class cards extends Component {
                           <option>2 шт</option>
                           <option>3 шт</option>
                        </select>
-                       <div className='card_icons'>
+                       <div className='card_icons' onClick={()=> this.shop(item.title, item.img, item.sum, item.skit)}>
                          <MdAddShoppingCart className="card_icon"/>
                        </div>
                     </div>

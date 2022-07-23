@@ -1,0 +1,69 @@
+.cope{
+    padding: 0 10%;
+}
+.cope_top{
+    display: flex;
+    align-items: center;
+}
+.cope_icon{
+    width: 46px;
+    height: 38px;
+    border: 1px solid #504C49;
+    border-radius: 6px;
+    color:#FF6875;
+}
+.cope_title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 52px;
+    align-items: center;
+    color: #1F2533;
+    margin-left: 40px;
+}
+.cope_middle{
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+.cope_left{
+    width: 727px;
+    height: 795px;
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    padding: 50px 43px;
+}
+.cope_ism,
+.cope_familiya,
+.cope_nomer,
+.cope_email{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #011043;
+    padding-top: 20px;
+}
+.input_ism,
+.input_familiya,
+.input_nomer,
+.input_email{
+    width: 641px;
+    height: 66px;
+    background: rgba(196, 196, 196, 0.2);
+    border: 1px solid #EFEFEF;
+    border-radius: 6px;
+    padding-left: 20px;
+}
+.cope_button{
+    width: 641px;
+    height: 66px;
+    background: #359740;
+    border: 1px solid #EFEFEF;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 70px;
+    color: #FFFFFF;
+}
