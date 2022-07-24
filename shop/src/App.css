@@ -3,6 +3,9 @@
   padding: 0 10%;
   position: relative;
 }
+*{
+  user-select:none;
+}
 .carousel_text{
   position: absolute;
   width: 351px;

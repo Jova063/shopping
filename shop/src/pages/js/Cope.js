@@ -14,7 +14,7 @@ export default class Cope extends Component {
         <Navbar/>
         <div className='cope'>
           <div className='cope_top'>
-            <a heft='#!'><HiOutlineArrowNarrowLeft className='cope_icon'/></a>
+            <a href='/basket'><HiOutlineArrowNarrowLeft className='cope_icon'/></a>
             <h1 className='cope_title'>Персональные данные</h1>
           </div>
             <div className='cope_middle'>
@@ -29,7 +29,26 @@ export default class Cope extends Component {
                 <input type='email' placeholder='grafikdesigner@gmail.com' className='input_email'/>
                 <button className='cope_button'>Отправить</button>
               </div>
-              <div>
+              <div className='cope_right'>
+                <h4 className='cope_right_title'>Итого:</h4>
+                <div className='cope_right_info'>
+                  <p className='cope_right_p'>Товары, 4 шт.</p>
+                  <p className='cope_right_sum'>40 418 474.34 сум</p>
+                </div>
+                <div className='cope_right_info'>
+                  <p className='cope_right_p'>Скидка</p>
+                  <p className='cope_right_sum'>-14 145 394 сум</p>
+                </div>
+                <div className='cope_right_info'>
+                  <p className='cope_right_p'>Общая сумма:</p>
+                  <p className='cope_right_sum'>26 273 080.34 сум</p>
+                </div>
+                <h6 className='cope_right_botton'>Нажимая 'Оформить заказ', я соглашаюсь с <span>публичным договором оферты</span></h6>
+                <p className='cope_footer'>Для расчета стоимости доставки крупногабаритного товара весом более 5 кг обращайтесь к оператору Call-центра* <br/>
+* Может взыматься дополнительная плата за доставку в труднодоступные места, (например крупногабаритная техника, которую нужно доставить в дома, с неработающим лифтом)<br/>
+** При необходимости</p>
+                
+
 
               </div>
            

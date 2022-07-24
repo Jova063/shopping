@@ -1,0 +1,220 @@
+.basket{
+    padding: 0 10%;
+}
+.basket_top{
+    display: flex;
+    align-items: center;
+}
+.basket_icon{
+    width: 46px;
+    height: 38px;
+    border: 1px solid #504C49;
+    border-radius: 6px;
+    color:#FF6875;
+}
+.basket_title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 52px;
+    align-items: center;
+    color: #1F2533;
+    margin-left: 40px;
+}
+.basket_p{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #70737C;
+    margin-left: 35%;
+    padding-top: 10px;
+}
+.basket_middle{
+    display: flex;
+}
+.basket_middle_left{
+    width: 873px;
+    border-top:1px solid #EFEFEF ;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.basket_middle_top{
+    display: flex;
+}
+.basket_left_title{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #70737C;
+}
+.basket_left_p1{
+    margin-left: 339px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #70737C;
+}
+.basket_left_p2{
+    margin-left: 86px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #70737C;
+}
+.basket_left_p3{
+    margin-left: 104px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #70737C;
+}
+.basket_middle_right{
+    width: 378px;
+    height: 430px;
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0px 4px 12px rgba(207, 207, 207, 0.25);
+    border-radius: 12px;
+    margin-left: 29px;
+    padding: 24px 25px;
+}
+.basket_middle1{
+    display: flex;
+}
+.basket_middle1_left{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.basket_close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: -10px;
+    top: 0px;
+    background: #E55C5C;
+    border-radius: 50%;
+    color: #FFFFFF;
+    text-align: center;
+}
+.basket_img{
+    width: 64px;
+    height: 63px;
+}
+.basket_p1{
+    width: 268px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #1F2533;
+    margin-top: 10px;
+    margin-left: 16px;
+}
+.basket_mat2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    margin-left: 93px;
+}
+.basket_p2{
+    width: 30px;
+    height: 30px;
+    border: 2px solid #7D7D7D;
+    border-radius: 5px;
+    color: #359740;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.basket_n2{
+    color: #359740;
+}
+.basket_p3{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    color: #1F2533;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.basket_right_title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #1F2533;
+}
+.basket_right_info1{
+    display: flex;
+    justify-content: space-between;
+}
+.basket_right_p1{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #70737C;
+}
+.basket_right_sum1{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    color: #1F2533;
+    margin-bottom: 33px;
+}
+.basket_right_info{
+    display: flex;
+    justify-content: space-between;
+}
+.basket_info{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #EFEFEF;
+}
+.basket_right_p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4E4E4E;
+}
+.basket_right_sum{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color:  #4E4E4E;
+}
+.basket_right_info2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.basket_right_p2{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 178.19%;
+    color: #70737C;
+}
+.basket_right_sum2{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    color: #1F2533;
+    margin-bottom: 33px;
+}
+.basket_button{
+    width: 328px;
+    height: 51px;
+    background: #359740;
+    border-radius: 8px;
+    border: none;
+    margin-top: -20px;
+}
+.basket_button a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 178.19%;
+    letter-spacing: -0.035em;
+    color: #FFFFFF;
+    text-decoration: none;
+}

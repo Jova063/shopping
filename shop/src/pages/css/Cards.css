@@ -150,3 +150,10 @@
     width: 200px;
     height: 150px;}
 }
+.skit_icon{
+  width: 46px;
+  height: 38px;
+  border: 1px solid #504C49;
+  border-radius: 6px;
+  color:#FF6875;
+}

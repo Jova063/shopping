@@ -11,13 +11,15 @@ export default class cards extends Component {
     data: data,
     buy:[]
   }
-  shop=(title, img, sum, skit)=> {
+  shop=(title, img, sum,skit1,xit, skit)=> {
     var push= true;
     var data1 = {
       'title': title,
       'img': img,
       'sum': sum,
       'skit': skit,
+      'skit1':skit1,
+      'xit':xit,
       'count':1
     }
  
@@ -36,7 +38,13 @@ export default class cards extends Component {
   localStorage.setItem("names", JSON.stringify(this.state.buy));
   var storedNames = JSON.parse(localStorage.getItem("names"));
   console.log(storedNames); }
-
+componentDidMount(){
+  if(JSON.parse(localStorage.getItem("names"))==null){
+    this.setState({buy:[]})
+  }else{
+    this.setState({buy:JSON.parse(localStorage.getItem("names"))})
+  }
+}
 
   render() {
     return (
@@ -46,10 +54,13 @@ export default class cards extends Component {
       <section className='news'>
         <div className='news_top'>
           <h1 className='news_text'>Новинки </h1>
-          <a href='#!' className='news_link'>Все категории</a>
+          <a href='/new' className='news_link'>Все категории</a>
            </div>
           <div className='card_wrapper'>
-            {data.map(item=>{
+            {data.map((item,key)=>{
+              if(key<4){
+                
+             
               return <div className=' '>
                 <img src={img1} alt="" className='card_img'/>
                 <div className='card_text'>
@@ -62,12 +73,12 @@ export default class cards extends Component {
                           <option>2 шт</option>
                           <option>3 шт</option>
                        </select>
-                       <div className='card_icons' onClick={()=> this.shop(item.title, item.img, item.sum, item.skit)}>
+                       <div className='card_icons' onClick={()=> this.shop(item.title,item.img,item.sum,item.skit1,item.xit,item.skit)}>
                          <MdAddShoppingCart className="card_icon"/>
                        </div>
                     </div>
                 </div>
-              </div>
+              </div> }
             })}
             
           </div>
@@ -75,15 +86,16 @@ export default class cards extends Component {
       </section>
       <section className='skit'>
         <div className='skit_top'>
-          <h1 className='skit_text'>Скит <span className='skit_text_span'>%</span> </h1>
-          <a href='#!' className='skit_link'>Все товары в категории </a>
+          <h1 className='skit_text'>Скидки  <span className='skit_text_span'>%</span> </h1>
+          <a href='/skit' className='skit_link'>Все товары в категории </a>
            </div>
           <div className='card_wrapper'>
-            {data.map(item=>{
+            {data.map((item, key)=>{
+              if(key<4){
               return <div className='card_list'>
                 <img src={img1} alt="" className='card_img'/>
                 <div className='card_text'>
-                <span className='skit_text_span'>12%</span>
+                <span className='skit_text_span'>{item.skit1}%</span>
                     <p className='card_title'>{item.title}</p>
                     <p className='card_sum'>{item.sum}</p>
                     <p className='card_skit'>{item.skit}</p>
@@ -93,12 +105,12 @@ export default class cards extends Component {
                           <option>2 шт</option>
                           <option>3 шт</option>
                        </select>
-                       <div className='card_icons'>
+                       <div className='card_icons'onClick={()=> this.shop(item.title,item.img,item.sum,item.skit1,item.xit,item.skit)}>
                          <MdAddShoppingCart className="card_icon"/>
                        </div>
                     </div>
                 </div>
-              </div>
+              </div>}
             })}
             
           </div>
@@ -123,14 +135,15 @@ export default class cards extends Component {
       <section className='xit'>
         <div className='xit_top'>
           <h1 className='xit_text'>Хиты продаж </h1>
-          <a href='#!' className='skit_link'>Все товары в категории </a>
+          <a href='/xit' className='skit_link'>Все товары в категории </a>
            </div>
           <div className='card_wrapper'>
-            {data.map(item=>{
+            {data.map((item,key)=>{
+              if(key<4){
               return <div className='card_list'>
                 <img src={img1} alt="" className='card_img'/>
                 <div className='card_text'>
-                <span className='skit_text_span'>Хит</span>
+                <span className='skit_text_span'>{item.xit}</span>
                     <p className='card_title'>{item.title}</p>
                     <p className='card_sum'>{item.sum}</p>
                     <p className='card_skit'>{item.skit}</p>
@@ -140,12 +153,12 @@ export default class cards extends Component {
                           <option>2 шт</option>
                           <option>3 шт</option>
                        </select>
-                       <div className='card_icons'>
+                       <div className='card_icons'onClick={()=> this.shop(item.title,item.img,item.sum,item.skit1,item.xit,item.skit)}>
                          <MdAddShoppingCart className="card_icon"/>
                        </div>
                     </div>
                 </div>
-              </div>
+              </div>}
             })}
             
           </div>
