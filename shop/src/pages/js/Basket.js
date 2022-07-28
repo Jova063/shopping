@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
+// import Footer from './Footer'
+// import Navbar from './Navbar'
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import "../css/Cards.css"
 import '../css/Basket.css'
@@ -60,7 +60,7 @@ export default class Basket extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='basket'>
           <div className='basket_top'>
             <a href='/'><HiOutlineArrowNarrowLeft className='basket_icon'/></a>
@@ -118,7 +118,8 @@ export default class Basket extends Component {
                 <p className='basket_right_p2'>Итого</p>
                 <p className='basket_right_sum2'>{this.state.allprice} Сум</p>
               </div>
-              <button className='basket_button'><a href='/cope'>Продолжать</a></button>
+              
+              <a href='/cope' ><button className='basket_button'>Продолжать</button></a>
             </div>
           </div>
         </div>
@@ -137,7 +138,7 @@ export default class Basket extends Component {
             
           </div>
         </section>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
+// import Footer from './Footer'
+// import Navbar from './Navbar'
 import img from '../img/magazin.png'
 import { TbTruckDelivery } from 'react-icons/tb'
 import { TbDiscount2 } from 'react-icons/tb'
@@ -14,7 +14,7 @@ export default class Magazin extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='magazin'>
           <div className='magazin_left'>
             <h1 className='magazin_left_title'>о магазине</h1>
@@ -72,7 +72,7 @@ export default class Magazin extends Component {
             </div>
         </div>
 
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     )
   }

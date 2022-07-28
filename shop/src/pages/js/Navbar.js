@@ -5,13 +5,14 @@ import {ImLocation} from 'react-icons/im'
 import {GiHamburgerMenu} from "react-icons/gi"
 import {HiShoppingCart} from "react-icons/hi"
 import {BiSearch} from "react-icons/bi"
+
 export default function Navbar() {
   const openModal=()=> {
      document.querySelector('.modal1').classList.toggle('open_modal')
   }
   return (
     <div>
-      <navbar className='navbar'>
+      <div className='navbar'>
               <div className='navbar_top'>
                 <div className='navbar_top_about'>
                   <p className='navbar_top_about_text'>О нас </p>
@@ -47,7 +48,7 @@ export default function Navbar() {
               </ul>
             </div>
 
-      </navbar>
+      </div>
       
     </div>
   )

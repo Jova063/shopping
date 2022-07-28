@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
+// import Footer from './Footer'
+// import Navbar from './Navbar'
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import { MdAddShoppingCart } from "react-icons/md"
 import "../css/Cards.css"
@@ -44,9 +44,9 @@ export default class News extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <section className='news'>
-        <div className='news_top'>
+        <div className='news_top1'>
         <a href='/'><HiOutlineArrowNarrowLeft className='skit_icon' /></a>
           <h1 className='news_text'>Новинки </h1>
            </div>
@@ -92,7 +92,7 @@ export default class News extends Component {
           </div>
        
       </section>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     )
   }

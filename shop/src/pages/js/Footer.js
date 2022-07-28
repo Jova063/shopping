@@ -13,6 +13,7 @@ export default class Footer extends Component {
       <div>
         <section className='brends'>
             <h1 className='brends_title'>Популярные бренды</h1>
+            
             <div className='brends_box'>
                 <div className='brend_app'>
                     <img src={app} alt/>

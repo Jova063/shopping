@@ -187,5 +187,8 @@
     .navbar_top_tel_location {
       display: none;
   }
+  .navbar_top_about {
+    margin-right: 0%;
+}
   } 
  

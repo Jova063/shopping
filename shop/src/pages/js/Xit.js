@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+// import Navbar from './Navbar'
+// import Footer from './Footer'
 import { MdAddShoppingCart } from "react-icons/md"
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import "../css/Cards.css"
@@ -46,9 +46,9 @@ export default class Xit extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <section className='xit'>
-        <div className='xit_top'>
+        <div className='xit_top1'>
         <a href='/'><HiOutlineArrowNarrowLeft className='skit_icon' /></a>
           <h1 className='xit_text'>Хиты продаж </h1>
            </div>
@@ -93,7 +93,7 @@ export default class Xit extends Component {
           </div>
        
       </section>
-        <Footer/>
+        {/* <Footer/> */}
         </div>
     )
   }

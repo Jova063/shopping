@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import '../../App.css'
-import Navbar from './Navbar'
+// import Navbar from './Navbar'
 import Cards from './Cards'
 import img from "../img/kamera.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Carousel} from "react-bootstrap"
-import Footer from './Footer'
+// import Footer from './Footer'
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-      <Navbar/>
+      {/* <Navbar/> */}
 
       <Carousel fade className='carousel'>
  <Carousel.Item>
@@ -48,7 +48,8 @@ export default class Home extends Component {
  </Carousel.Item>
 </Carousel>
      <Cards/>
-     <Footer/></div>
+     {/* <Footer/> */}
+     </div>
     )
   }
 }

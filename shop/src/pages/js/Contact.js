@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
+// import Footer from './Footer'
+// import Navbar from './Navbar'
 import img from '../img/kontact.png'
 import'../css/Contact.css'
 export default class Contact extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='contact'>
           <div className='contact_left'>
             <h1 className='contact_title'>Контакты</h1>
@@ -31,7 +31,7 @@ export default class Contact extends Component {
             <img src={img} alt=''/>
           </div>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     )
   }

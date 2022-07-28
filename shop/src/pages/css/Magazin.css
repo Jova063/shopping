@@ -113,3 +113,30 @@
     color: #000000;
     margin-top: 10px;
 }
+@media(max-width:900px){
+    .magazin_right img {
+        width: 50vw;
+        margin-top: 134px;
+    }
+    .magazin_left_card {
+        padding: 0;
+        width: 242px;
+    }
+}
+@media (max-width:600px) {
+    .magazin{
+        display: block;
+    }
+    .magazin_right img {
+        width: 80vw;
+        margin-top: 20px;
+    }
+    .magazin_left_card {
+        padding:0 10vw;
+        width: 80vw;
+        margin: auto;
+    }
+    .wrapper1_title {
+        font-weight: 600;
+        font-size: 24px;}
+}

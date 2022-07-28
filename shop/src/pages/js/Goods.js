@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+// import Navbar from './Navbar'
+// import Footer from './Footer'
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import img from "../img/goods2.png"
 import img1 from "../img/goods1.png"
@@ -13,10 +13,10 @@ export default class Goods extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='goods'>
           <div className='goods_top'>
-            <a heft='#!'><HiOutlineArrowNarrowLeft className='goods_icon'/></a>
+            <a href='/'><HiOutlineArrowNarrowLeft className='goods_icon'/></a>
             <h1 className='goods_title'>Товары</h1>
           </div>
           <div className='goods_middle'>
@@ -56,7 +56,7 @@ export default class Goods extends Component {
             
           </div>
         </section>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     )
   }

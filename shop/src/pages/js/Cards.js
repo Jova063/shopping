@@ -59,8 +59,6 @@ componentDidMount(){
           <div className='card_wrapper'>
             {data.map((item,key)=>{
               if(key<4){
-                
-             
               return <div className=' '>
                 <img src={img1} alt="" className='card_img'/>
                 <div className='card_text'>

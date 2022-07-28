@@ -142,6 +142,17 @@
   line-height: 32px;
   text-align: center;
 }
+.news_top1,
+.skit_top1,
+.xit_top1{
+  display: flex;
+}
+
+.card12{
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 
 @media(max-width:520px){
   

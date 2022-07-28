@@ -11,10 +11,43 @@
     justify-content: space-between;
     margin-top: 50px;
 }
+.contact_teaxt_p{
+    font-size: 14px;
+}
 .contact_text_right{
     margin-right: 400px;
 }
 .contact_right{
     width: 50%;
     margin-left: -50px;
+}
+@media (max-width:1400px) {
+    .contact_text_right{
+        margin-right: 200px;
+    }
+}
+@media (max-width:1200px) {
+    .contact_text_right{
+        margin-right: 100px;
+    }
+}
+@media (max-width:900px) {
+    .contact_text_right{
+        margin-right: 0px;
+    }
+    .contact{
+        display: block;
+    }
+}
+@media(max-width:700px){
+    .contact_left{
+        width: 100%;
+    }
+    .contact_right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .contact_right img{
+        width: 80%;
+    }
 }

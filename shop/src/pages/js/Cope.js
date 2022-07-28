@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+// import Navbar from './Navbar'
+// import Footer from './Footer'
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import "../css/Cards.css"
 import img2 from "../img/klipartz.jpg"
@@ -8,10 +8,41 @@ import '../css/Cope.css'
 const foto=require("../js/foto")
 
 export default class Cope extends Component {
+  state={
+    buy:[],
+    allprice:0,
+    count:0,
+  }
+  getsum=()=>{
+    var a=0;
+    for(var i=0;i<this.state.buy.length;i++){
+      a=a+this.state.buy[i].sum*this.state.buy[i].count
+    }
+    this.setState({allprice:a.toFixed(2)})}
+    getcount=()=>{
+      var a=0;
+      for(var i=0;i<this.state.buy.length;i++){
+        a=a+this.state.buy[i].count
+      }
+      this.setState({count:a})}
+     
+  componentDidMount(){
+    if(JSON.parse(localStorage.getItem("names"))==null){
+    this.state.buy=[]
+      this.setState({})
+    }else{
+      this.state.buy=JSON.parse(localStorage.getItem("names"))
+      this.setState({})
+    }
+    setTimeout(() => {
+      this.getsum();
+      this.getcount()
+    }, 100);
+  }
   render() {
     return (
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='cope'>
           <div className='cope_top'>
             <a href='/basket'><HiOutlineArrowNarrowLeft className='cope_icon'/></a>
@@ -32,16 +63,16 @@ export default class Cope extends Component {
               <div className='cope_right'>
                 <h4 className='cope_right_title'>Итого:</h4>
                 <div className='cope_right_info'>
-                  <p className='cope_right_p'>Товары, 4 шт.</p>
-                  <p className='cope_right_sum'>40 418 474.34 сум</p>
+                  <p className='cope_right_p'>Товары, {this.state.count} шт.</p>
+                  <p className='cope_right_sum'>{this.state.allprice} сум</p>
                 </div>
                 <div className='cope_right_info'>
                   <p className='cope_right_p'>Скидка</p>
-                  <p className='cope_right_sum'>-14 145 394 сум</p>
+                  <p className='cope_right_sum'>0 сум</p>
                 </div>
                 <div className='cope_right_info'>
                   <p className='cope_right_p'>Общая сумма:</p>
-                  <p className='cope_right_sum'>26 273 080.34 сум</p>
+                  <p className='cope_right_sum'>{this.state.allprice}сум</p>
                 </div>
                 <h6 className='cope_right_botton'>Нажимая 'Оформить заказ', я соглашаюсь с <span>публичным договором оферты</span></h6>
                 <p className='cope_footer'>Для расчета стоимости доставки крупногабаритного товара весом более 5 кг обращайтесь к оператору Call-центра* <br/>
@@ -70,7 +101,7 @@ export default class Cope extends Component {
             
           </div>
         </section>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     )
   }
