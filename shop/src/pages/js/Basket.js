@@ -134,6 +134,7 @@ export default class Basket extends Component {
                 <img src={img2} alt="" className='card_img1'/>               
                     <p className='card_title1'>{item.title}</p>
               </div>
+
             })}
             
           </div>
