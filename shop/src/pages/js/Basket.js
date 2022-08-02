@@ -140,6 +140,7 @@ export default class Basket extends Component {
           </div>
         </section>
         {/* <Footer/> */}
+        
       </div>
     )
   }
