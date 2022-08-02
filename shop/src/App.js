@@ -29,6 +29,7 @@ export default class App extends Component {
     data:data,
     buy:[]
   }
+  
   search=()=>{
     if(document.querySelector("#search").value==''){
       this.setState({show:true})
@@ -36,6 +37,7 @@ export default class App extends Component {
       this.setState({show:false})
     }
   }
+
   shop=(title, img, sum,skit1,xit, skit)=> {
     var push= true;
     var data1 = {
@@ -128,7 +130,7 @@ componentDidMount(){
        </div>
     </Router>):(
       <div className='card12'>
-      {this.state.data.map((item,key)=>{
+      {data.map((item,key)=>{
         var k=0;
         if(item.title.includes(document.querySelector('#search').value)){
           return <div className=' '>

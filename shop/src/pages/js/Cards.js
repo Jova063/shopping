@@ -3,13 +3,26 @@ import { MdAddShoppingCart } from "react-icons/md"
 import img1 from "../img/yangi.png"
 import img2 from "../img/klipartz.jpg"
 import "../css/Cards.css"
+import axios from 'axios'
+
 const data=require("../js/new") 
 const foto= require("../js/foto")
 
 export default class cards extends Component {
   state = {
     data: data,
-    buy:[]
+    buy:[],
+    data2:[]
+  }
+  getPraducts=()=>{
+    axios.get('http://shop.abrorjonaxmadov.uz/api/v1/products/')
+    .then(res=>{
+      this.setState({data2:res.data})
+      console.log(this.state.data2);
+    })
+    .catch(err=>{
+      console.log('xas');
+    })
   }
   shop=(title, img, sum,skit1,xit, skit)=> {
     var push= true;
@@ -38,12 +51,14 @@ export default class cards extends Component {
   localStorage.setItem("names", JSON.stringify(this.state.buy));
   var storedNames = JSON.parse(localStorage.getItem("names"));
   console.log(storedNames); }
-componentDidMount(){
+componentDidMount(){ 
+   this.getPraducts()
   if(JSON.parse(localStorage.getItem("names"))==null){
     this.setState({buy:[]})
   }else{
     this.setState({buy:JSON.parse(localStorage.getItem("names"))})
   }
+
 }
 
   render() {
@@ -57,14 +72,14 @@ componentDidMount(){
           <a href='/new' className='news_link'>Все категории</a>
            </div>
           <div className='card_wrapper'>
-            {data.map((item,key)=>{
+            {this.state.data2.map((item,key)=>{
               if(key<4){
               return <div className=' '>
-                <img src={img1} alt="" className='card_img'/>
+                <img src={item.thumbnail!==null?(item.thumbnail.image):(img1)} alt="" className='card_img'/>
                 <div className='card_text'>
                     <p className='card_title'>{item.title}</p>
-                    <p className='card_sum'>{item.sum}</p>
-                    <p className='card_skit'>{item.skit}</p>
+                    <p className='card_sum'>{item.in_promotion!==null?(item.in_promotion.percentage):(0)}%</p>
+                    <p className='card_skit'>{item.price}</p>
                     <div className='card_button'>
                        <select className='card_drop'>
                           <option>1 шт</option>
@@ -88,15 +103,15 @@ componentDidMount(){
           <a href='/skit' className='skit_link'>Все товары в категории </a>
            </div>
           <div className='card_wrapper'>
-            {data.map((item, key)=>{
+            {this.state.data2.map((item, key)=>{
+              if(item.in_promotion!==null){
               if(key<4){
               return <div className='card_list'>
-                <img src={img1} alt="" className='card_img'/>
+                <img src={item.thumbnail!==null?(item.thumbnail.image):(img1)} alt="" className='card_img'/>
                 <div className='card_text'>
-                <span className='skit_text_span'>{item.skit1}%</span>
+                <span className='skit_text_span'>{item.in_promotion}%</span>
                     <p className='card_title'>{item.title}</p>
-                    <p className='card_sum'>{item.sum}</p>
-                    <p className='card_skit'>{item.skit}</p>
+                    <p className='card_skit'>{item.s}</p>
                     <div className='card_button'>
                        <select className='card_drop'>
                           <option>1 шт</option>
@@ -109,7 +124,7 @@ componentDidMount(){
                     </div>
                 </div>
               </div>}
-            })}
+            }})}
             
           </div>
        

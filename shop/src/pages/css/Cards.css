@@ -64,9 +64,8 @@
   margin: -2px;
 }
 .card_sum{
-  text-decoration: line-through;
   margin: -2px;
-  color: #7D7D7D;
+  color: #ff0000;
   font-size: 14px;
 }
 .card_skit{
