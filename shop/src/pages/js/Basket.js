@@ -23,7 +23,7 @@ export default class Basket extends Component {
   getsum=()=>{
     var a=0;
     for(var i=0;i<this.state.buy.length;i++){
-      a=a+this.state.buy[i].sum*this.state.buy[i].count
+      a=a+this.state.buy[i].price*this.state.buy[i].count
     }
     this.setState({allprice:a.toFixed(2)})}
     getcount=()=>{
@@ -87,8 +87,8 @@ export default class Basket extends Component {
                     <p classNa  me='basket_n2'>{item.count}</p>
                     <p className='basket_p2' onClick={()=>{this.minus(key)}}>-</p>
                   </div>
-                  <p className='basket_p3'>{item.sum} Сум</p>
-                  <p className='basket_p3'>{(item.sum*item.count).toFixed(2)} Сум</p>
+                  <p className='basket_p3'>{item.price} Сум</p>
+                  <p className='basket_p3'>{(item.price*item.count).toFixed(2)} Сум</p>
               </div> 
             })}
             

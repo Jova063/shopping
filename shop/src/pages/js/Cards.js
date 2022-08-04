@@ -24,14 +24,13 @@ export default class cards extends Component {
       console.log('xas');
     })
   }
-  shop=(title, img, sum,skit1,xit, skit)=> {
+  shop=(title, img, sum,xit, skit)=> {
     var push= true;
     var data1 = {
       'title': title,
       'img': img,
       'sum': sum,
       'skit': skit,
-      'skit1':skit1,
       'xit':xit,
       'count':1
     }
@@ -86,7 +85,7 @@ componentDidMount(){
                           <option>2 шт</option>
                           <option>3 шт</option>
                        </select>
-                       <div className='card_icons' onClick={()=> this.shop(item.title,item.img,item.sum,item.skit1,item.xit,item.skit)}>
+                       <div className='card_icons' onClick={()=> this.shop(item.title,item.img,item.price,item.xit,item.skit)}>
                          <MdAddShoppingCart className="card_icon"/>
                        </div>
                     </div>
@@ -109,22 +108,22 @@ componentDidMount(){
               return <div className='card_list'>
                 <img src={item.thumbnail!==null?(item.thumbnail.image):(img1)} alt="" className='card_img'/>
                 <div className='card_text'>
-                <span className='skit_text_span'>{item.in_promotion}%</span>
+                <span className='skit_text_span'>{item.in_promotion.percentage}%</span>
                     <p className='card_title'>{item.title}</p>
-                    <p className='card_skit'>{item.s}</p>
+                    <p className='card_skit'>{item.price}</p>
                     <div className='card_button'>
                        <select className='card_drop'>
                           <option>1 шт</option>
                           <option>2 шт</option>
                           <option>3 шт</option>
                        </select>
-                       <div className='card_icons'onClick={()=> this.shop(item.title,item.img,item.sum,item.skit1,item.xit,item.skit)}>
+                       <div className='card_icons'onClick={()=> this.shop(item.title,item.img,item.price,item.skit1,item.xit,item.skit)}>
                          <MdAddShoppingCart className="card_icon"/>
                        </div>
                     </div>
                 </div>
-              </div>}
-            }})}
+              </div>}}
+            })}
             
           </div>
        
@@ -151,14 +150,14 @@ componentDidMount(){
           <a href='/xit' className='skit_link'>Все товары в категории </a>
            </div>
           <div className='card_wrapper'>
-            {data.map((item,key)=>{
+            {this.state.data2.map((item,key)=>{
               if(key<4){
               return <div className='card_list'>
                 <img src={img1} alt="" className='card_img'/>
                 <div className='card_text'>
                 <span className='skit_text_span'>{item.xit}</span>
                     <p className='card_title'>{item.title}</p>
-                    <p className='card_sum'>{item.sum}</p>
+                    <p className='card_sum'>{item.price}</p>
                     <p className='card_skit'>{item.skit}</p>
                     <div className='card_button'>
                        <select className='card_drop'>
@@ -166,7 +165,7 @@ componentDidMount(){
                           <option>2 шт</option>
                           <option>3 шт</option>
                        </select>
-                       <div className='card_icons'onClick={()=> this.shop(item.title,item.img,item.sum,item.skit1,item.xit,item.skit)}>
+                       <div className='card_icons'onClick={()=> this.shop(item.title,item.img,item.price,item.xit,item.skit)}>
                          <MdAddShoppingCart className="card_icon"/>
                        </div>
                     </div>

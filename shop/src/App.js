@@ -116,17 +116,17 @@ componentDidMount(){
       {this.state.show?(
         <Router>
         <div className="App">
-        <Routes>
+         <Routes>
               <Route exact path='/' element={<Home/>}></Route>
               <Route exact path='/contact' element={<Contact/>}></Route>
-              <Route exact path='/mag' element={<Magazin/>}></Route>
+           <Route exact path='/mag' element={<Magazin/>}></Route>
               <Route exact path='/new' element={<News/>}></Route>
               <Route exact path='/skit' element={<Skit/>}></Route>
               <Route exact path='/xit' element={<Xit/>}></Route>
               <Route exact path='/goods' element={<Goods/>}></Route>
               <Route exact path='/basket' element={<Basket/>}></Route>
               <Route exact path='/cope' element={<Cope/>}></Route>
-       </Routes>
+       </Routes> 
        </div>
     </Router>):(
       <div className='card12'>
