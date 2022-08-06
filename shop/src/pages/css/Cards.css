@@ -93,6 +93,9 @@
   display: flex;
   align-items: center;justify-content: center;
 }
+.card_icons:active{
+  background: red;
+}
 .card_icon{
   font-size: 30px;
   color: #fff;

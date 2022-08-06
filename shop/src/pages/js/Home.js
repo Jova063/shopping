@@ -5,9 +5,26 @@ import Cards from './Cards'
 import img from "../img/kamera.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Carousel} from "react-bootstrap"
+import axios from 'axios';
 // import Footer from './Footer'
 
 export default class Home extends Component {
+  state={
+    data:[]
+  }
+  getCategore=()=>{
+    axios.get('http://shop.abrorjonaxmadov.uz/api/v1/categories/')
+    .then(res=>{
+      this.setState({data:res.data})
+      console.log(this.state.data);
+    })
+    .catch(err=>{
+      console.log('xas');
+    })
+  }
+  componentDidMount(){
+    this.getCategore()
+  }
   render() {
     return (
       <div>
