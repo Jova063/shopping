@@ -6,7 +6,9 @@ import "../css/Cards.css"
 import img2 from "../img/klipartz.jpg"
 import '../css/Cope.css'
 const foto=require("../js/foto")
-
+const open=()=>{
+  console.log(localStorage.getItem('tokken'));
+}
 export default class Cope extends Component {
   state={
     buy:[],
@@ -43,6 +45,7 @@ export default class Cope extends Component {
     return (
       <div>
         {/* <Navbar/> */}
+        <button onClick={open}>qeqwrewtrytutyiop</button>
         <div className='cope'>
           <div className='cope_top'>
             <a href='/basket'><HiOutlineArrowNarrowLeft className='cope_icon'/></a>

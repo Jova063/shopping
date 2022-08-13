@@ -24,7 +24,19 @@ export default class cards extends Component {
       console.log('xas');
     })
   }
-
+  getTokken=()=>{
+    var data={
+      "username": "admin",
+      "password": "testing321"
+    }
+    axios.post('http://shop.abrorjonaxmadov.uz/auth/v1/login/', data)
+    .then(res=>{
+      console.log(res.data);
+      localStorage.setItem('tokken', res.data)
+    }).catch(err=>{
+      console.log(err);
+    })
+  }
   shop=(title, img, sum,xit, skit)=> {
     var push= true;
     var data1 = {
@@ -145,6 +157,9 @@ componentDidMount(){
           </div>
        
       </section>
+      <button onClick={()=>this.getTokken()}>
+        add
+      </button>
       <section className='xit'>
         <div className='xit_top'>
           <h1 className='xit_text'>Хиты продаж </h1>
