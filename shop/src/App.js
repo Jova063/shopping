@@ -19,12 +19,17 @@ import {BiSearch} from "react-icons/bi"
 import img1 from "../src/pages/img/yangi.png"
 import { MdAddShoppingCart } from "react-icons/md"
 import Footer from './pages/js/Footer';
+import axios from 'axios';
+import { TbHistory } from 'react-icons/tb';
 const data=require('./pages/js/new.js')
 const openModal=()=> {
     document.querySelector('.modal1').classList.toggle('open_modal')
  }
 export default class App extends Component {
   state = {
+    data1:[],
+    token:'',
+    category:'',
     show:true,
     data:data,
     buy:[]
@@ -37,7 +42,37 @@ export default class App extends Component {
       this.setState({show:false})
     }
   }
-
+  getCategory=()=>{
+    axios.get('http://shop.abrorjonaxmadov.uz/api/v1/categories/',data)
+    .then(res=>{
+      this.setState({data1:res.data})
+    })
+  }
+  getTokken=()=>{
+    var data={
+      "username": document.querySelector('#fname').value,
+      "password": document.querySelector('#lname').value
+    }
+    axios.post('http://shop.abrorjonaxmadov.uz/auth/v1/login/', data)
+    .then(res=>{
+      this.setState({token:res.data})
+      console.log(res.data);
+      localStorage.setItem('token', res.data)
+    }).catch(err=>{
+      console.log(err);
+    })
+  }
+  postCategory=()=>{
+     var data={
+      "title_en": document.querySelector('#en').value,
+      "title_ru": document.querySelector('#ru').value,
+      "title_uz": document.querySelector('#uz').value
+     }
+     axios.post('http://shop.abrorjonaxmadov.uz/api/v1/categories/create/',data, {header:`Authorization: Basic ${this.state.token}`})
+     .then(res=>{
+      this.setState({category:res.data})
+     })
+  }
   shop=(title, img, sum,skit1,xit, skit)=> {
     var push= true;
     var data1 = {
@@ -66,6 +101,7 @@ export default class App extends Component {
   var storedNames = JSON.parse(localStorage.getItem("names"));
   console.log(storedNames); }
 componentDidMount(){
+  this.getCategory()
   if(JSON.parse(localStorage.getItem("names"))==null){
     this.setState({buy:[]})
   }else{
@@ -75,7 +111,45 @@ componentDidMount(){
   render() {
     return (
       <div> 
-        <div className='navbar'>
+       { this.state.token?(
+        <table>
+          {this.state.data1.map((item)=>{
+             return <tr>
+              <td>{item.title}</td>
+              <td>{item.slug}</td>
+            </tr>
+          })}
+        </table>
+
+
+       ):(<form >
+    <label for="fname">First Name</label>
+    <input type="text" id="fname"  />
+    <label for="lname">Password</label>
+    <input type="text" id="lname" />
+    <input type="button" onClick={()=>{this.getTokken()}} value="Submit"/>
+  </form>)
+       }
+
+
+       
+       {this.state.category?(<h1>ishladi</h1>):(<form>
+    <label for="fname">uz</label>
+    <input type="text" id="uz"  />
+    <label for="fname">ru</label>
+    <input type="text" id="ru" />
+    <label for="fname">en</label>
+    <input type="text" id="en" />
+    <input type="button" onClick={()=>{this.getCategory()}} value="Submit"/>
+  </form>)
+
+       }
+
+
+
+
+
+         {/* <div className='navbar'>
               <div className='navbar_top'>
                 <div className='navbar_top_about'>
                   <p className='navbar_top_about_text'>О нас </p>
@@ -159,7 +233,7 @@ componentDidMount(){
     )}
 
     
-      <Footer/>
+      <Footer/>  */}
       </div>
     )
   }
